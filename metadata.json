@@ -1,0 +1,6 @@
+{
+  "name": "Smart City Explorer",
+  "description": "AI-assisted, constraint-aware city exploration planner that verifies whether your trip is realistically feasible within your time, budget, and return deadline.",
+  "requestFramePermissions": ["geolocation"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
