@@ -1,20 +1,62 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://ai.google.dev/static/site-assets/images/share-ais-513315318.png" />
-</div>
+# Smart City Explorer
 
-# Run and deploy your AI Studio app
+An AI-powered city exploration assistant that helps travelers discover what they can realistically explore based on their available time, budget, location, and transportation options.
 
-This contains everything you need to run your app locally.
+## Problem
 
-View your app in AI Studio: https://ai.studio/apps/1835df96-c2dd-414c-bb79-124549256af2
+When visiting an unfamiliar city with only a few free hours, it can be difficult to decide which places are practical to visit while staying within a fixed budget and returning on time.
 
-## Run Locally
+Smart City Explorer addresses this problem by combining destination recommendations with time, cost, transportation, and return-deadline constraints.
 
-**Prerequisites:**  Node.js
+## Solution
 
+Smart City Explorer recommends places based on the user's situation and checks whether the selected plan fits the chosen constraints.
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+> **AI recommends. The system checks feasibility using planning estimates.**
+
+The application does not claim to verify live traffic, real-time availability, delays, or guaranteed arrival times.
+
+## Key Features
+
+- Time and budget-aware recommendations
+- Location-based destination discovery
+- Destination selection
+- Multiple transportation options
+- Route and distance estimation
+- Visit-duration estimation
+- Budget estimation
+- Return-deadline checking
+- Feasibility analysis
+- Alternative plans
+- Interactive map
+
+## How It Works
+
+1. Choose a starting location
+2. Enter available time and budget
+3. Discover destinations
+4. Select destinations
+5. Choose transportation
+6. Check feasibility
+7. Generate an itinerary
+
+## Technology Stack
+
+- React
+- TypeScript
+- Vite
+- Google AI Studio / Gemini
+- Maps and location services
+- CSS
+
+## Project Structure
+
+```text
+src/
+├── components/       # Application UI components
+├── data/             # Location and planning data
+├── services/         # Location, route, fare and recommendation services
+├── utils/            # Calculation and validation utilities
+├── feasibility.ts    # Constraint and feasibility engine
+├── types.ts          # Shared TypeScript types
+└── App.tsx           # Main application
